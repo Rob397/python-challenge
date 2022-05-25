@@ -64,10 +64,7 @@ with open(csvpath) as csvfile:
            row_list.append(change)
     print(row_list)                         # print out the distances for each outer loop iteration
    
-   
-   
-   
-   
+  
     # split the pnl and month then add up the index 1 (P&L column) values
     
     #for line in rows:
