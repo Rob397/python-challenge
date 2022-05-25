@@ -41,25 +41,29 @@ csvpath = os.path.join("Resources", "budget_data.csv")
 with open(csvpath) as csvfile:
     
     csvreader = csv.reader(csvfile)
-    # csv_header = next(csvreader)   an put print(csv_header) to check it worked
-    
-    
-    #print (rows[1])  # print the second row
+    #csv_header = next(csvreader)   #an put print(csv_header) to check it worked
+   #print (rows[1])  # print the second row
+  
     rows = list(csvreader)
 
     #add up the total number of columns after the first row.
-    print (f"Total Months:{len(rows)}") 
-
-       
-         
+    print (f"Total Months:{len(rows)-1}")      
     for row in csvreader:
-      #print(row[0])
+   
       total += int(row[1])    #int(row[1])   # total = total + int(row[1]) 
     
     print(f"The total profit/loss:   {total}")
+    j =0
+
    
-   
-   
+    for j in range(1,len(rows)):           # j from 1 to length-1
+     k = j - 1                    # set the new k in the first outer loop
+     row_list = []                # reset row_list each time
+     
+    for i in range (j, len(rows)):          # i from j to len-1
+           z = (rows[i] - rows[k])              # get difference between each cell
+           row_list.append(z)
+    print(row_list)                         # print out the distances for each outer loop iteration
    
    
    
