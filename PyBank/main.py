@@ -53,16 +53,15 @@ with open(csvpath) as csvfile:
       total += int(row[1])    #int(row[1])   # total = total + int(row[1]) 
     
     print(f"The total profit/loss:   {total}")
-    j =0
-
+    
    
     for j in range(1,len(rows)):           # j from 1 to length-1
      k = j - 1                    # set the new k in the first outer loop
      row_list = []                # reset row_list each time
      
     for i in range (j, len(rows)):          # i from j to len-1
-           z = (rows[i] - rows[k])              # get difference between each cell
-           row_list.append(z)
+           change = (rows[i] - rows[k])              # get difference between each cell
+           row_list.append(change)
     print(row_list)                         # print out the distances for each outer loop iteration
    
    
