@@ -25,6 +25,8 @@ with open(csvpath) as csvfile:
      print("Election Results")
      print("----------------------------------")
      print (f"Total Number of Votes Cast:{len(rows)-1}")      
+     
+  
     
 
 
