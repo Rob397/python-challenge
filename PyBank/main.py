@@ -31,9 +31,7 @@ csvpath = os.path.join("Resources", "budget_data.csv")
 # Lists to store data
 month = []
 pnl =[]
-change =[]
 count =0
-
 list=[]
 count = 0
 total =0
@@ -64,19 +62,32 @@ with open(csvpath) as csvfile:
 
 a = (f"Total Months:{len(month)}")
 b = (f"The total profit/loss:   {total}")
-print("Financila Analysis")
-print("--------------------------------")
-print (a)
-print(b)
 
 
+# -----------below in comment lines is my approach for change in price and the max/min values------
 # set_1  =[]
 # set_2 = []
+# change = set_2 - set_1
 # for i in pnl:
   
-#   set_1.append(int(pnl[i]-pnl[i-1]))
+#   set_1.append(int(pnl[i]))
+#   set_2.append(int(pnl[i+1]))
+# max_change = max(change)
+# min_change =min(change)
 
-# print(set_1)
+# # Greatest Increase in Profits: Feb-2012 ($1926159)
+# # Greatest Decrease in Profits: Sep-2013 ($-2196167)
+# c=  (f"Greatest Increase in Profits:  {max_change}")
+# d = (f"Greatest Decrease in Profits: {min_change}")
+
+print("Financila Analysis")
+print("--------------------------------")
+
+print (a)
+print(b)
+# print(f"Average  Change:   {change}")
+# print(c)
+# print(d)
 
 
 f = open("PyBank", "w")
