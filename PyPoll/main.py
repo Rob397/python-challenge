@@ -52,16 +52,23 @@ print(f"The winner is {new_ma_val}")
 unique_list = list(dict.fromkeys(list_Candidate))
 
 #Simple version by checking the length and puttin in the Canidate results {unique_list[0]}:  {round(percent_x,3)}%     ({x}) manually for each candidate up to len(list_Candidate)
-  
+p = (f"Total Number of Votes Cast:{len(list_ID)}") 
+q = (f"{unique_list[0]}:  {round(percent_x,3)}%     ({x})")
+r= (f"{unique_list[1]}:  {round(percent_y,3)}%      ({y})")
+s = (f"{unique_list[2]} :    {round(percent_z,3)}%     ({z})")
+a2= (f"{unique_list[3]}:   {round(percent_a,3)}%     ({a})")
+
 print("Election Results")
 print("----------------------------------")
-print (f"Total Number of Votes Cast:{len(list_ID)}")  
+print (p)  
 print("----------------------------------")
-print(f"{unique_list[0]}:  {round(percent_x,3)}%     ({x})  \n{unique_list[1]}:  {round(percent_y,3)}%      ({y}) \n{unique_list[2]} :    {round(percent_z,3)}%     ({z})  \n{unique_list[3]}:   {round(percent_a,3)}%     ({a})")
+print(f"{q}  \n{r} \n{s} \n{a2}")
 print("----------------------------------")
 print(f"The winner is {new_ma_val}") 
 print("----------------------------------")
 
+f = open("PyPoll", "w")
+f.write(f"Election Results\n---------------------------------- \n{p} \n{q} \n{r} \n{s} \n{a2} ")
 
 
 
