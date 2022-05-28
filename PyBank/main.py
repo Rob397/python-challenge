@@ -19,6 +19,8 @@
 from operator import index
 import os
 import csv
+from re import A
+from typing import Counter
 
 count_m = 0
 row_count = 0 # count the number of row for the for loop to get the number of month/data points
@@ -58,11 +60,33 @@ with open(csvpath) as csvfile:
         count = count +1
     
         total += int(row[1])    #int(row[1])   # total = total + int(row[1]) 
-    
+
+
+a = (f"Total Months:{len(month)}")
+b = (f"The total profit/loss:   {total}")
 print("Financila Analysis")
 print("--------------------------------")
-print (f"Total Months:{len(month)}")
-print(f"The total profit/loss:   {total}")
+print (a)
+print(b)
+
+
+# set_1  =[]
+# set_2 = []
+# for i in pnl:
+  
+#   set_1.append(int(pnl[i]-pnl[i-1]))
+
+# print(set_1)
+
+
+f = open("PyBank", "w")
+f.write(f"Financila Analysis\n--------------------------------\n{a} \n{b}")
+
+
+
+  
+
+
 
 
 
